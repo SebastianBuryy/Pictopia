@@ -43,7 +43,7 @@ const MobileNav = () => {
                 className="cursor-pointer"
               />
             </SheetTrigger>
-            <SheetContent className="sheet-content sm:w-64">
+            <SheetContent className="sheet-content bg-gradient-to-r from-java-50 via-java-100 to-java-200 sm:w-64">
               <>
                 <Image
                   src="/assets/images/logo-text.png"
@@ -59,7 +59,8 @@ const MobileNav = () => {
                         key={link.route}
                         className={`sidebar-nav_element group 
                                     ${
-                                      isActive && "gradient-text"
+                                      isActive &&
+                                      "bg-purple-gradient shadow-md shadow-java-400 text-white"
                                     } p-18 flex whitespace-nowrap text-dark-700`}
                       >
                         <Link
@@ -83,7 +84,10 @@ const MobileNav = () => {
           </Sheet>
         </SignedIn>
         <SignedOut>
-          <Button asChild className="button bg-purple-gradient bg-cover">
+          <Button
+            asChild
+            className="button bg-purple-gradient shadow-md shadow-java-400 bg-cover"
+          >
             <Link href="/sign-in">Login</Link>
           </Button>
         </SignedOut>

@@ -64,7 +64,7 @@ declare type Transformations = {
     multiple?: boolean;
   };
   recolor?: {
-    prompt?: string;
+    prompt: string;
     to: string;
     multiple?: boolean;
   };

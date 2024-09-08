@@ -18,8 +18,8 @@ const Sidebar = () => {
           <Image
             src="/assets/images/logo-text.png"
             alt="logo"
-            width="180"
-            height="2"
+            width="200"
+            height="200"
           />
         </Link>
 
@@ -31,11 +31,11 @@ const Sidebar = () => {
                 return (
                   <li
                     key={link.route}
-                    className={`sidebar-nav_element group 
+                    className={`sidebar-nav_element group
                                     ${
                                       isActive
-                                        ? "bg-purple-gradient text-white"
-                                        : "text-gray-700"
+                                        ? "bg-purple-gradient shadow-md shadow-java-400 text-white"
+                                        : "text-java-800"
                                     }`}
                   >
                     <Link href={link.route} className="sidebar-link">
@@ -61,8 +61,8 @@ const Sidebar = () => {
                     className={`sidebar-nav_element group 
                                     ${
                                       isActive
-                                        ? "bg-purple-gradient text-white"
-                                        : "text-gray-700"
+                                        ? "bg-purple-gradient shadow-md shadow-java-400 text-white"
+                                        : "text-java-800"
                                     }`}
                   >
                     <Link href={link.route} className="sidebar-link">
@@ -85,7 +85,10 @@ const Sidebar = () => {
           </SignedIn>
 
           <SignedOut>
-            <Button asChild className="button bg-purple-gradient bg-cover">
+            <Button
+              asChild
+              className="button bg-purple-gradient shadow-md shadow-java-400 bg-cover"
+            >
               <Link href="/sign-in">Login</Link>
             </Button>
           </SignedOut>

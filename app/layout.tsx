@@ -6,13 +6,13 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 const IBMPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-ibm-plex',
- });
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ibm-plex",
+});
 
 export const metadata: Metadata = {
   title: "Pictopia",
-  description: "AI-powered image generator",
+  description: "AI-powered image transformation tool",
 };
 
 export default function RootLayout({
@@ -22,16 +22,18 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider
-      afterSignOutUrl='/'
+      afterSignOutUrl="/"
       appearance={{
         variables: {
-          colorPrimary: "#3730A3",
-          colorText: "#7E79D6",
-        }
+          colorPrimary: "#63E5E3",
+          colorText: "#2dbcbe",
+        },
       }}
     >
       <html lang="en">
-        <body className={cn("font-IBMPlexSans antialiased", IBMPlexSans.variable)}>
+        <body
+          className={cn("font-IBMPlexSans antialiased", IBMPlexSans.variable)}
+        >
           {children}
         </body>
       </html>
